@@ -7,6 +7,8 @@ from api.habitacion.arduino_habitaciones.models import arduino_habitaciones
 class sensores_arduino_habitaciones(models.Model):
     id_habitacion = models.ForeignKey(habitacion, on_delete=models.CASCADE) 
     id_arduino =  models.ForeignKey(arduino_habitaciones, on_delete=models.CASCADE) 
+    descripcion = models.CharField( verbose_name="Descripcion", max_length=5000)
+
     estado_sensor = models.CharField( verbose_name="Estado Sensor", max_length=3)
     valor_sensor = models.CharField( verbose_name="Valor Sensor", max_length=3)
 

@@ -26,10 +26,11 @@ from api.clima import views
 router = routers.DefaultRouter()
 router.register(r'Habitaciones',HabitacionViewSets)
 router.register(r'Arduino_Habilitaciones',arduino_habitacionesViewSet)
-router.register(r'Sensores_Arduino_Habitaciones',sensores_arduino_habitacionesViewSets)
+#router.register(r'Sensores_Arduino_Habitaciones',sensores_arduino_habitacionesViewSets)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
-    path('clima', views.clima.as_view())
+    path('clima', views.clima.as_view()),
+    path('api/Sensores_Arduino/', sensores_arduino_habitacionesViewSets.as_view())
 ]

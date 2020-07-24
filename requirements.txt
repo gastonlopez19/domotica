@@ -3,3 +3,4 @@ djangorestframework==3.10
 django-filter==2.3.0
 django-cors-headers==3.4.0
 coreapi
+psycopg2
