@@ -16,7 +16,7 @@ class sensores_arduino_habitacionesViewSets(APIView):
         if request.GET.get("id_sensor") :
             sensores = sensores_arduino_habitacionesSerializers(sensores_arduino_habitaciones.objects.filter(id=request.GET.get("id_sensor")),many=True)
 
-            return Response({"info": sensores.data})
+            return Response(sensores.data)
 
         else:
             sensores = sensores_arduino_habitacionesSerializers(sensores_arduino_habitaciones.objects.all(), many=True)
