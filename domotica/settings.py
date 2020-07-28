@@ -93,8 +93,8 @@ DATABASES = {
 #    }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'legalesdb',
-        'USER': 'cde_usuario',
+        'NAME': 'domotica',
+        'USER': 'domotica',
         'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '5432',
